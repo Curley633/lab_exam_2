@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab_Exam_JC</a> &gt; <a href="index.source.html" class="el_package">ie.gmit</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">/*
+    Name: James Curley
+    Email: g00262917@gmit.ie
+    Date: 09/03/2020
+    Description: This is the employee class
+*/
+package ie.gmit;
+
+public class Employee {
+    private String name;
+    private String phone;
+    private String employeeNumber;
+    private int age;
+
+    public Employee(String name, String phone, String employeeNumber, int age)
+<span class="fc" id="L16">    {</span>
+<span class="pc bpc" id="L17" title="1 of 4 branches missed.">        if(name.length() &gt;= 3 &amp;&amp; name.length() &lt;= 25) {</span>
+<span class="fc" id="L18">            this.name = name;</span>
+        } else {
+<span class="fc" id="L20">            throw new IllegalArgumentException(&quot;Name provided is not valid&quot;);</span>
+        }
+
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if(phone.length() == 8) {</span>
+<span class="fc" id="L24">            this.phone = phone;</span>
+        } else {
+<span class="fc" id="L26">            throw new IllegalArgumentException(&quot;Phone must contain 8 digits&quot;);</span>
+        }
+
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if(employeeNumber.length() == 5) {</span>
+<span class="fc" id="L30">            this.employeeNumber = employeeNumber;</span>
+        } else {
+<span class="fc" id="L32">            throw new IllegalArgumentException(&quot;Employee Number must contain 5 digits&quot;);</span>
+        }
+
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if(age &gt;= 16) {</span>
+<span class="fc" id="L36">            this.age = age;</span>
+        } else {
+<span class="fc" id="L38">            throw new IllegalArgumentException(&quot;Employee must be over the age of 16&quot;);</span>
+        }
+<span class="fc" id="L40">    }</span>
+
+    public String getName() {
+<span class="fc" id="L43">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L47">        this.name = name;</span>
+<span class="nc" id="L48">    }</span>
+
+    public String getPhone() {
+<span class="fc" id="L51">        return phone;</span>
+    }
+
+    public void setPhone(String phone) {
+<span class="nc" id="L55">        this.phone = phone;</span>
+<span class="nc" id="L56">    }</span>
+
+    public String getEmployeeNumber() {
+<span class="fc" id="L59">        return employeeNumber;</span>
+    }
+
+    public void setEmployeeNumber(String employeeNumber) {
+<span class="nc" id="L63">        this.employeeNumber = employeeNumber;</span>
+<span class="nc" id="L64">    }</span>
+
+    public int getAge() {
+<span class="fc" id="L67">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="nc" id="L71">        this.age = age;</span>
+<span class="nc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
